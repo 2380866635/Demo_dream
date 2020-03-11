@@ -5,7 +5,7 @@ import java.util.List;
 
 public class EasyUiDataGridResult implements Serializable {
     private Long total;
-    private List<?> rows;//?Ïàµ±ÓÚObject
+    private List<?> rows;
 
     public EasyUiDataGridResult() {
     }
