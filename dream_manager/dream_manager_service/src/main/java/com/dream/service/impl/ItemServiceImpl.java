@@ -34,10 +34,10 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public EasyUiDataGridResult list(int pageNum, int pageSize) {
+        TbItemExample tbItemExample = new TbItemExample();
+        tbItemExample.setOrderByClause("updated desc");
 
-        PageHelper.startPage(pageNum,pageSize);
-
-        List<TbItem> tbItems=tbItemMapper.selectByExample(new TbItemExample());
+        List<TbItem> tbItems=tbItemMapper.selectByExample(tbItemExample);
 
         PageInfo<TbItem> tbItemPageInfo=new PageInfo<>(tbItems);
         long total=tbItemPageInfo.getTotal();

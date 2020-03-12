@@ -25,4 +25,6 @@
   -->
   <dubbo:service interface="com.dream.service.ItemService"
                  ref="itemServiceImpl"/>
+  <dubbo:service interface="com.dream.service.ItemCatService"
+                 ref="itemCatServiceImpl"/>
 </beans>
