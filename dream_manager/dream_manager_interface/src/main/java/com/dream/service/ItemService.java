@@ -28,6 +28,11 @@ public interface ItemService {
      * @return
      */
     EasyUiDataGridResult list(int pageNum, int pageSize);
-
-
+    /**
+     * 增加商品功能 将增加商品添加到数据库
+     * @param tbItem
+     * @param desc
+     * @return
+     */
+    DreamResult save(TbItem tbItem, String desc);
 }
