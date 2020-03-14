@@ -41,4 +41,14 @@
     <dubbo:reference interface="com.dream.service.ItemCatService"
                      id="itemCatService"/>
 
+    <context:property-placeholder location="classpath:resource/resources.properties"/>
+
+    <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
+          id="multipartResolver">
+            <!--设置属性 上传的图片最大尺寸 5*1024*1025-->
+        <property name="maxUploadSize">
+            <value>5242880</value>
+        </property>
+    </bean>
+
 </beans>
