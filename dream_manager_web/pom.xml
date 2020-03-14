@@ -86,6 +86,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
         <!--注册中心-->
         <dependency>
             <groupId>org.apache.zookeeper</groupId>
@@ -96,6 +97,16 @@
             <groupId>com.github.sgroschupf</groupId>
             <artifactId>zkclient</artifactId>
             <version>0.1</version>
+        </dependency>
+        <!--fastDFS插件依赖-->
+        <dependency>
+            <groupId>fastdfs_client</groupId>
+            <artifactId>fastdfs_client</artifactId>
+            <version>1.25</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
         </dependency>
     </dependencies>
 
