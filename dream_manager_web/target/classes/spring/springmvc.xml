@@ -40,6 +40,8 @@
                      id="itemService"/>
     <dubbo:reference interface="com.dream.service.ItemCatService"
                      id="itemCatService"/>
+    <dubbo:reference interface="com.dream.content.service.TbContentCategoryService"
+                     id="tbContentCategoryService"/>
 
     <context:property-placeholder location="classpath:resource/resources.properties"/>
 

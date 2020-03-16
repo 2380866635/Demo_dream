@@ -11,6 +11,8 @@
         <module>../dream_common</module>
         <module>../dream_manager</module>
         <module>../dream_manager_web</module>
+        <module>../dream_protal_web</module>
+        <module>../dream_content</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -5,6 +5,11 @@
     <file url="file://$PROJECT_DIR$/dream_common/src/main/java/com/dream/common/pojo/EasyUiTreeNode.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_common/src/main/java/com/dream/common/pojo/UUIDUtils.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_content/dream_content_interface/src/main/java/com/dream/content/service/TbContentCategoryService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_content/dream_content_interface/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_content/dream_content_service/src/main/java/com/dream/content/service/impl/TbContentCategoryServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_content/dream_content_service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_content/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager/dream_manager_dao/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager/dream_manager_dao/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager/dream_manager_interface/src/main/java/com/dream/service/ItemCatService.java" charset="UTF-8" />
@@ -16,11 +21,13 @@
     <file url="file://$PROJECT_DIR$/dream_manager/dream_manager_service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/Test/java/com/test/FdfsTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/java/com/dream/controller/ContentCategoryController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/java/com/dream/controller/ItemCatController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/java/com/dream/controller/ItemController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/java/com/dream/web/util/FastDFSClient.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/resources/resource/fastdfs.conf" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_parent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_protal_web/src/main/resources" charset="UTF-8" />
   </component>
 </project>
