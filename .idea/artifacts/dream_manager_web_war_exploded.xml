@@ -14,7 +14,9 @@
           <element id="module-output" name="dream_manager_web" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: com.dream:dream_manager_interface:1.0-SNAPSHOT" />
+          <element id="archive" name="dream_manager_interface-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="dream_manager_interface" />
+          </element>
           <element id="archive" name="dream_common-1.0-SNAPSHOT.jar">
             <element id="module-output" name="dream_common" />
           </element>

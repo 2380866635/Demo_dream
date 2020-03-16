@@ -27,7 +27,9 @@
           <element id="library" level="project" name="Maven: com.github.jsqlparser:jsqlparser:2.0" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.32" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.9" />
-          <element id="library" level="project" name="Maven: com.dream:dream_manager_interface:1.0-SNAPSHOT" />
+          <element id="archive" name="dream_manager_interface-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="dream_manager_interface" />
+          </element>
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />

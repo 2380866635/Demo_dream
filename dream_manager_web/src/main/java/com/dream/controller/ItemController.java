@@ -69,7 +69,7 @@ public class ItemController {
             HashMap<String, Object> map = new HashMap<>();
             map.put("error",1);
             map.put("message","上传失败");
-            return com.alibaba.fastjson.JSON.toJSONString(map);
+            return JSON.toJSONString(map);
         }
     }
 

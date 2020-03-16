@@ -31,6 +31,7 @@ public class ContentCategoryController{
     }
     @RequestMapping("/update")
     public  DreamResult update(long id,String name){
+
         return tbContentCategoryService.update(id,name);
     }
 }

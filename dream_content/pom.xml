@@ -32,7 +32,7 @@
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <configuration>
-                    <port>8083</port><!--端口号-->
+                    <port>8082</port><!--端口号-->
                     <path>/</path><!--访问路径-->
                 </configuration>
             </plugin>

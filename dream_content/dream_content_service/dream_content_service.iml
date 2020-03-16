@@ -24,11 +24,12 @@
     <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:1.2.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:4.2.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-web:4.2.4.RELEASE" level="project" />
-    <orderEntry type="module" module-name="dream_content_interface" />
     <orderEntry type="module" module-name="dream_common" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.2.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.2.4.RELEASE" level="project" />
     <orderEntry type="module" module-name="dream_manager_dao" />
     <orderEntry type="module" module-name="dream_manager_pojo" />
+    <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper:5.1.10" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-core:4.2.4.RELEASE" level="project" />
   </component>
 </module>

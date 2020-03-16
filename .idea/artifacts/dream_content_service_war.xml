@@ -9,6 +9,11 @@
     </properties>
     <root id="archive" name="dream_content_service.war">
       <element id="artifact" artifact-name="dream_content_service:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="dream_content_interface" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>

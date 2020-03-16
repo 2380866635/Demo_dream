@@ -38,18 +38,16 @@
         在controller中注入对象时，使用这个id进行注入
     -->
 <!--    <dubbo:reference interface="com.dream.service.ItemService"
-                     id="itemService"/>
-    <dubbo:reference interface="com.dream.service.ItemCatService"
-                     id="itemCatService"/>-->
-
-   <!-- <context:property-placeholder location="classpath:resource/resources.properties"/>
-
+                     id="itemService"/>-->
+    <context:property-placeholder location="classpath:resource/Ad1Node.properties"/>
+    <dubbo:reference interface="com.dream.content.service.TbContentService"
+                     id="tbContentService"/>
     <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
           id="multipartResolver">
-            &lt;!&ndash;设置属性 上传的图片最大尺寸 5*1024*1025&ndash;&gt;
+            <!--设置属性 上传的图片最大尺寸 5*1024*1025-->
         <property name="maxUploadSize">
             <value>5242880</value>
         </property>
-    </bean>-->
+    </bean>
 
 </beans>
