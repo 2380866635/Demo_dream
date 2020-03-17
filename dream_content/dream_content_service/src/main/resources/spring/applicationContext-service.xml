@@ -9,7 +9,7 @@
        http://www.springframework.org/schema/context/spring-context.xsd
         http://code.alibabatech.com/schema/dubbo
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
-  <context:component-scan base-package="com.dream.content.service"/>
+  <context:component-scan base-package="com.dream.content.service.impl"/>
   <!--向注册中心注册服务-->
   <!--提供者应用名称-->
   <dubbo:application name="dream_content"/>
@@ -27,4 +27,6 @@
                  ref="tbContentCategoryServiceImpl"/>
   <dubbo:service interface="com.dream.content.service.TbContentService"
                  ref="tbContentServiceImpl"/>
+  <dubbo:service interface="com.dream.content.service.IndexTbContentService"
+                 ref="indexTbContentServiceImpl"/>
 </beans>

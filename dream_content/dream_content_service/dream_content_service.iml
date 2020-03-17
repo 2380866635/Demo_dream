@@ -31,5 +31,6 @@
     <orderEntry type="module" module-name="dream_manager_pojo" />
     <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper:5.1.10" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:4.2.4.RELEASE" level="project" />
+    <orderEntry type="module" module-name="dream_content_interface" />
   </component>
 </module>

@@ -30,6 +30,9 @@
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/resources/resource/fastdfs.conf" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_parent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_protal_web/src/main/java/com/dream/protal/controller/IndexController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_protal_web/src/main/java/com/dream/protal/controller/IndexNodeController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_protal_web/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_protal_web/src/main/resources/resource/Ad1Node.properties" charset="GBK" />
   </component>
 </project>

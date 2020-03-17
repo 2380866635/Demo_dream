@@ -12,6 +12,8 @@ public class Ad1Node implements Serializable {
     private String widthB;
     private String alt;
 
+
+
     public String getSrc() {
         return src;
     }
