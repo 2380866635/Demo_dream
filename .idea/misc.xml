@@ -10,6 +10,7 @@
     <file type="web" url="file://$PROJECT_DIR$/dream_manager/dream_manager_service" />
     <file type="web" url="file://$PROJECT_DIR$/dream_manager_web" />
     <file type="web" url="file://$PROJECT_DIR$/dream_protal_web" />
+    <file type="web" url="file://$PROJECT_DIR$/dream_search/dream_search_service" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -20,5 +21,8 @@
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SuppressionsComponent">
+    <option name="suppComments" value="[]" />
   </component>
 </project>

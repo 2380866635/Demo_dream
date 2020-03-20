@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/dream_common/src/main/java/com/dream/common/pojo/DreamResult.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_common/src/main/java/com/dream/common/pojo/EasyUiTreeNode.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_common/src/main/java/com/dream/common/pojo/SearchItem.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_common/src/main/java/com/dream/common/pojo/UUIDUtils.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_content/dream_content_interface/src/main/java/com/dream/content/redis/JedisClient.java" charset="UTF-8" />
@@ -30,6 +31,7 @@
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/java/com/dream/controller/ContentCategoryController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/java/com/dream/controller/ItemCatController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/java/com/dream/controller/ItemController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/java/com/dream/controller/SearchItemController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/java/com/dream/web/util/FastDFSClient.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/resources/resource/fastdfs.conf" charset="UTF-8" />
@@ -37,5 +39,19 @@
     <file url="file://$PROJECT_DIR$/dream_protal_web/src/main/java/com/dream/protal/controller/IndexNodeController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_protal_web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_protal_web/src/main/resources/resource/Ad1Node.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_search/dream_search_interface/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_search/dream_search_service/src" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_search/dream_search_service/src/main" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_search/dream_search_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_search/dream_search_service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_search/dream_search_service/src/main/resources/log4j.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_search/dream_search_service/src/main/resources/mybatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_search/dream_search_service/src/main/resources/mybatis/druid-1.0.9.jar" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/dream_search/dream_search_service/src/main/resources/mybatis/mybatis-spring-1.2.2.jar" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/dream_search/dream_search_service/src/main/resources/properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_search/dream_search_service/src/main/resources/spring" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_search/dream_search_service/src/main/resources/spring/applicationContext-dao.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/dream_search/dream_search_service/src/test/java/com/search/solr/TestSolr.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_search/src/main/resources" charset="UTF-8" />
   </component>
 </project>

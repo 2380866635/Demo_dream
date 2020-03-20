@@ -18,7 +18,6 @@ import java.util.List;
 public class TbContentCategoryServiceImpl implements TbContentCategoryService {
     @Autowired
     private TbContentCategoryMapper tbContentCategoryMapper;
-
     /**
      * 获取广告树
      * @param parentId =父id

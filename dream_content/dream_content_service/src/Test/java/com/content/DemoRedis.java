@@ -1,14 +1,13 @@
 package com.content;
 
 
-import redis.clients.jedis.HostAndPort;
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisCluster;
-
-import java.util.HashSet;
+import com.dream.content.redis.JedisClient;
+import org.junit.Test;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class DemoRedis {
    /* @Test
+
     public void TestRedisClient(){
         ClassPathXmlApplicationContext ctx = new
                 ClassPathXmlApplicationContext("spring/applicationContext-redis.xml");
