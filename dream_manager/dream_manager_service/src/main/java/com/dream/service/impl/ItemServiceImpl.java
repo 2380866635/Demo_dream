@@ -11,8 +11,14 @@ import com.dream.pojo.TbItemExample;
 import com.dream.service.ItemService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
 
+import javax.jms.Destination;
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.Session;
 import java.util.Date;
 import java.util.List;
 
@@ -22,12 +28,17 @@ public class ItemServiceImpl implements ItemService {
     private TbItemMapper tbItemMapper;
     @Autowired
     private TbItemDescMapper tbItemDescMapper;
+    @Autowired
+    private JmsTemplate jmsTemplate;
+    @Autowired
+    private Destination destination;
     @Override
     public DreamResult delete(List<Long> itemIds) {
         TbItemExample tbItemExample = new TbItemExample();
         TbItemExample.Criteria criteria = tbItemExample.createCriteria();
         criteria.andIdIn(itemIds);
         tbItemMapper.deleteByExample(tbItemExample);
+        sendMqMessage(itemIds+"");
         return DreamResult.ok();
     }
 
@@ -35,6 +46,17 @@ public class ItemServiceImpl implements ItemService {
     public TbItem selectByKey(long itemId) {
         return tbItemMapper.selectByPrimaryKey(itemId);
     }
+
+    //发送MQ消息
+    private void sendMqMessage(String itemId){
+        jmsTemplate.send(destination, new MessageCreator() {
+            @Override
+            public Message createMessage(Session session) throws JMSException {
+                return session.createTextMessage(itemId);
+            }
+        });
+    }
+
 
     @Override
     public EasyUiDataGridResult list(int pageNum, int pageSize) {
@@ -60,6 +82,7 @@ public class ItemServiceImpl implements ItemService {
         tbItem.setUpdated(tbItem.getCreated());
         //将商品信息添加到数据库
         tbItemMapper.insertSelective(tbItem);
+        sendMqMessage(itemId+"");
         //将商品描述的信息表补全
         TbItemDesc tbItemDesc = new TbItemDesc();
         tbItemDesc.setItemId(itemId);
@@ -68,6 +91,7 @@ public class ItemServiceImpl implements ItemService {
         tbItemDesc.setUpdated(tbItemDesc.getCreated());
         //将信息添加到数据库表中
         tbItemDescMapper.insertSelective(tbItemDesc);
+        sendMqMessage(itemId+"");
         return DreamResult.ok();
     }
 }

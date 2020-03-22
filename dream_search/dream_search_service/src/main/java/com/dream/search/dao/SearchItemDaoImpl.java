@@ -1,12 +1,15 @@
 package com.dream.search.dao;
 
+import com.dream.common.pojo.DreamResult;
 import com.dream.common.pojo.SearchItem;
 import com.dream.common.pojo.SearchResult;
+import com.dream.search.mapper.SearchItemMapper;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
+import org.apache.solr.common.SolrInputDocument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -18,6 +21,8 @@ import java.util.Map;
 public class SearchItemDaoImpl implements SearchItemDao{
     @Autowired
     private SolrServer solrServer;
+    @Autowired
+    private SearchItemMapper searchItemMapper;
 
     @Override
     public SearchResult search(SolrQuery query) throws Exception {
@@ -59,5 +64,24 @@ public class SearchItemDaoImpl implements SearchItemDao{
         //总记录数
         searchResult.setTotalNum(list.getNumFound());
         return searchResult;
+    }
+
+    @Override
+    public DreamResult updateSearchItemById(Long itemId) throws Exception {
+        //调用Mapper来查询内容
+        SearchItem item = searchItemMapper.getItemById(itemId);
+        SolrInputDocument document = new SolrInputDocument();
+        document.addField("id",item.getId());
+        document.addField("item_title",item.getTitle());
+        document.addField("item_sell_point",item.getSellPoint());
+        document.addField("item_image",item.getImage());
+        document.addField("item_price",item.getPrice());
+        document.addField("item_category_name",item.getCategoryName());
+        document.addField("itemm_desc",item.getItemDesc());
+        //向索引库添加文档
+        solrServer.add(document);
+        //提交
+        solrServer.commit();
+        return DreamResult.ok();
     }
 }

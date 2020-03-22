@@ -26,6 +26,9 @@
           <file>jar://$MAVEN_REPOSITORY$/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar!/org/jboss/netty/container/spring/beans.xml</file>
           <file>file://$MAVEN_REPOSITORY$/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar</file>
         </fileset>
+        <fileset id="fileset3" name="Spring Application Context (3)" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/spring/applicationContext-activemq.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
@@ -118,6 +121,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="dream_search_interface" />
+    <orderEntry type="library" name="Maven: org.apache.activemq:activemq-all:5.15.12" level="project" />
     <orderEntry type="module" module-name="dream_common" />
     <orderEntry type="library" name="Maven: joda-time:joda-time:2.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.3.2" level="project" />

@@ -27,6 +27,7 @@
     <file url="file://$PROJECT_DIR$/dream_manager/dream_manager_service/src/main/java/com/dream/service/impl/ItemCatServiceImpl.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager/dream_manager_service/src/main/java/com/dream/service/impl/ItemServiceImpl.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager/dream_manager_service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_manager/dream_manager_service/src/test/java/com/dream/activemq/TextActiveMQ.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/Test/java/com/test/FdfsTest.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/java/com/dream/controller/ContentCategoryController.java" charset="UTF-8" />
@@ -56,7 +57,5 @@
     <file url="file://$PROJECT_DIR$/dream_search_web/src/main/java/com/dream/search/controller/SearchItemController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_search_web/src/main/java/com/dream/search/exception/GlobalExceptionResolver.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_search_web/src/main/resources" charset="UTF-8" />
-    <file url="file://D:/教学文件/JAVA/Java讲义/10项目/day10/dream/dream_search/dream_search_service/src/main/java" charset="UTF-8" />
-    <file url="file://D:/教学文件/JAVA/Java讲义/10项目/day10/dream/dream_search/dream_search_service/src/main/resources" charset="UTF-8" />
   </component>
 </project>

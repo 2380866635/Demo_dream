@@ -95,5 +95,9 @@ public class SearchItemServiceImpl implements SearchItemService {
              solrServer.commit();
             return DreamResult.ok();
     }
+    public DreamResult updateSearchItemById(Long id) throws Exception {
+        return searchItemDao.updateSearchItemById(id);
+    }
+
 
 }
