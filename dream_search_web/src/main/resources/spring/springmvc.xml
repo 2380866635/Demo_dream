@@ -26,6 +26,7 @@
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+    <bean id="globalExceptionResolver" class="com.dream.search.exception.GlobalExceptionResolver"/>
 
     <!--加上一个ItemService的bean,从manager系统中调用-->
     <dubbo:application name="dream_search_web"/>

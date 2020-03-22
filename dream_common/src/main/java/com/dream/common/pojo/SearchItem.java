@@ -17,6 +17,12 @@ public class SearchItem implements Serializable {
     private String categoryName;
     /**商品描述*/
     private String itemDesc;
+    public String[] getImages() {
+        if (this.image != null && !"".equals(this.image) && this.image.indexOf(",") != -1) {
+            return this.image.split(",");
+        }
+        return new String[]{this.image};
+    }
 
     public String getId() {
         return id;
@@ -46,6 +52,8 @@ public class SearchItem implements Serializable {
         return image;
     }
 
+
+
     public void setImage(String image) {
         this.image = image;
     }
@@ -68,19 +76,6 @@ public class SearchItem implements Serializable {
 
     public String getItemDesc() {
         return itemDesc;
-    }
-
-    @Override
-    public String toString() {
-        return "SearchItem{" +
-                "id='" + id + '\'' +
-                ", title='" + title + '\'' +
-                ", sellPoint='" + sellPoint + '\'' +
-                ", image='" + image + '\'' +
-                ", price=" + price +
-                ", categoryName='" + categoryName + '\'' +
-                ", itemDesc='" + itemDesc + '\'' +
-                '}';
     }
 
     public void setItemDesc(String itemDesc) {

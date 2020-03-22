@@ -23,6 +23,8 @@ public class SearchItemController {
         //发出该请求的是门户系统  请求方式为get方式？q=搜索内容
         //基本上搜索内容中必有中文  但是web解决得只是post方式 中文乱码
         //解决Get方式乱码把字符串进行转码
+
+
         queryString = new String(queryString.getBytes("ISO-8859-1"), "UTF-8");
         SearchResult search = searchItemService.search(queryString, page, ITEM_ROWS);
         model.addAttribute("query",queryString);
