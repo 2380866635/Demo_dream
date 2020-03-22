@@ -35,4 +35,7 @@ public interface ItemService {
      * @return
      */
     DreamResult save(TbItem tbItem, String desc);
+
+
+    DreamResult update(TbItem tbItem, String desc);
 }

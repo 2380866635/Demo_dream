@@ -19,7 +19,8 @@ public class ContentController {
 
     @RequestMapping("/query/list")
     public EasyUiDataGridResult list(@RequestParam("page")int pageNum,
-                                     @RequestParam("rows")int pageSize,long categoryId){
+                                     @RequestParam("rows")int pageSize,
+                                     long categoryId){
         return tbcontentService.list(pageNum,pageSize,categoryId);
     }
     @RequestMapping("/save")

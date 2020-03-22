@@ -7,8 +7,10 @@ import com.dream.mapper.TbItemDescMapper;
 import com.dream.mapper.TbItemMapper;
 import com.dream.pojo.TbItem;
 import com.dream.pojo.TbItemDesc;
+import com.dream.pojo.TbItemDescExample;
 import com.dream.pojo.TbItemExample;
 import com.dream.service.ItemService;
+import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
@@ -38,7 +40,9 @@ public class ItemServiceImpl implements ItemService {
         TbItemExample.Criteria criteria = tbItemExample.createCriteria();
         criteria.andIdIn(itemIds);
         tbItemMapper.deleteByExample(tbItemExample);
-        sendMqMessage(itemIds+"");
+        for(Long itemid:itemIds){
+            sendMqMessage(itemid+"");
+        }
         return DreamResult.ok();
     }
 
@@ -60,9 +64,9 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public EasyUiDataGridResult list(int pageNum, int pageSize) {
+        PageHelper.startPage(pageNum,pageSize);
         TbItemExample tbItemExample = new TbItemExample();
         tbItemExample.setOrderByClause("updated desc");
-
         List<TbItem> tbItems=tbItemMapper.selectByExample(tbItemExample);
 
         PageInfo<TbItem> tbItemPageInfo=new PageInfo<>(tbItems);
@@ -82,7 +86,6 @@ public class ItemServiceImpl implements ItemService {
         tbItem.setUpdated(tbItem.getCreated());
         //将商品信息添加到数据库
         tbItemMapper.insertSelective(tbItem);
-        sendMqMessage(itemId+"");
         //将商品描述的信息表补全
         TbItemDesc tbItemDesc = new TbItemDesc();
         tbItemDesc.setItemId(itemId);
@@ -92,6 +95,27 @@ public class ItemServiceImpl implements ItemService {
         //将信息添加到数据库表中
         tbItemDescMapper.insertSelective(tbItemDesc);
         sendMqMessage(itemId+"");
+        return DreamResult.ok();
+    }
+
+    @Override
+    public DreamResult update(TbItem tbItem, String desc) {
+        //获得商品修改信息
+        TbItemExample tbItemExample = new TbItemExample();
+        TbItemExample.Criteria criteria = tbItemExample.createCriteria();
+        criteria.andIdEqualTo(tbItem.getId());
+        tbItem.setUpdated(new Date());
+        tbItemMapper.updateByExampleSelective(tbItem,tbItemExample);
+        //将商品描述的信息表补全
+        TbItemDesc tbItemDesc = new TbItemDesc();
+        TbItemDescExample tbItemDescExample = new TbItemDescExample();
+        TbItemDescExample.Criteria criteria1 = tbItemDescExample.createCriteria();
+        criteria1.andItemIdEqualTo(tbItem.getId());
+        tbItemDesc.setItemDesc(desc);
+        tbItemDesc.setUpdated(new Date());
+        tbItemDescMapper.updateByExampleSelective(tbItemDesc,tbItemDescExample);
+        //将修改的Id交给索引更新
+        sendMqMessage(tbItem.getId()+"");
         return DreamResult.ok();
     }
 }

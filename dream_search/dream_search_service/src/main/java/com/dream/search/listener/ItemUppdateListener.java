@@ -18,6 +18,8 @@ public class ItemUppdateListener implements MessageListener {
            if (message instanceof TextMessage) {
                TextMessage message1 = (TextMessage) message;
                long itemId = Long.parseLong(message1.getText());
+
+               System.out.println("更新索引库方法"+itemId);
                 searchItemService.updateSearchItemById(itemId);
            }
        } catch (Exception e) {

@@ -73,6 +73,17 @@ public class ItemController {
         }
     }
 
+    /**
+     * 修改商品信息
+     * @param tbItem 商品信息
+     * @param desc 商品描述
+     * @return 返回是否成功
+     */
+    @RequestMapping("/update")
+    public DreamResult update(TbItem tbItem,String desc){
+        return itemService.update(tbItem,desc);
+
+    }
 
     @RequestMapping("/selectByKey/{itemId}")
     public TbItem selectByKey(@PathVariable long itemId){
