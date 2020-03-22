@@ -10,7 +10,7 @@
 		http://www.springframework.org/schema/mvc
  		http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <context:component-scan base-package="com.dream.protal"/>
+    <context:component-scan base-package="com.dream.protal.controller"/>
 
     <!--开启MVC注解扫描 如果配置了此注解驱动，那么就不用配置处理器映射器和处理器适配器了 -->
     <mvc:annotation-driven/>
@@ -28,14 +28,14 @@
 
     <context:property-placeholder location="classpath:resource/Ad1Node.properties"/>
     <!--加上一个ItemService的bean,从manager系统中调用-->
-    <dubbo:application name="dream_manager_web"/>
+    <dubbo:application name="dream_protal_web"/>
     <!--注册中心的地址-->
     <dubbo:registry address="zookeeper://127.0.0.1:2181" register=""/>
 
     <!--注册中心的地址-->
 
     <dubbo:reference interface="com.dream.content.service.TbContentService"
-                     id="tbContentService"/>
+                     id="tbContentService" timeout="30000" />
     <!--调用服务
         interface="com.dream.service.ItemService" 调用的接口
         会把服务的接口的bean 注入到spring容器中，给bean设置id

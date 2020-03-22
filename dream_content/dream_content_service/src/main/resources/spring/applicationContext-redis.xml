@@ -11,12 +11,12 @@
        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
     <context:component-scan base-package="com.dream.content.redis"/>
   <!--单机版redis-->
-     <!-- <bean class="redis.clients.jedis.JedisPool" id="jedisPool">
+      <bean class="redis.clients.jedis.JedisPool" id="jedisPool">
         <constructor-arg name="host" value="192.168.1.12"/>
         <constructor-arg name="port" value="6379"/>
-    </bean>-->
+    </bean>
     <!--集群版redis  单机版和集群版两个不能同时存在不然不能用-->
-    <bean class="redis.clients.jedis.JedisCluster" id="jedisCluster">
+   <!-- <bean class="redis.clients.jedis.JedisCluster" id="jedisCluster">
         <constructor-arg>
             <set>
                 <bean class="redis.clients.jedis.HostAndPort">
@@ -45,5 +45,5 @@
                 </bean>
             </set>
         </constructor-arg>
-    </bean>
+    </bean>-->
 </beans>

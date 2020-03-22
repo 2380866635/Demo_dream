@@ -4,9 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import redis.clients.jedis.JedisCluster;
 
-@Component
+//@Component
 public class JedisClientCluster implements JedisClient{
-    @Autowired
+  //  @Autowired
     private JedisCluster jedisCluster;
     @Override
     public String set(String key, String value) {

@@ -11,6 +11,9 @@
     <file type="web" url="file://$PROJECT_DIR$/dream_manager_web" />
     <file type="web" url="file://$PROJECT_DIR$/dream_protal_web" />
     <file type="web" url="file://$PROJECT_DIR$/dream_search/dream_search_service" />
+    <file type="web" url="file://$PROJECT_DIR$/dream_search_web" />
+    <file type="web" url="file://D:/教学文件/JAVA/Java讲义/10项目/day10/dream/dream_search/dream_search_service/src/main/java" />
+    <file type="web" url="file://D:/教学文件/JAVA/Java讲义/10项目/day10/dream/dream_search/dream_search_service/src/main/resources" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">

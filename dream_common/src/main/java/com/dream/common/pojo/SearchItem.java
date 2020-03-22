@@ -70,6 +70,19 @@ public class SearchItem implements Serializable {
         return itemDesc;
     }
 
+    @Override
+    public String toString() {
+        return "SearchItem{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", sellPoint='" + sellPoint + '\'' +
+                ", image='" + image + '\'' +
+                ", price=" + price +
+                ", categoryName='" + categoryName + '\'' +
+                ", itemDesc='" + itemDesc + '\'' +
+                '}';
+    }
+
     public void setItemDesc(String itemDesc) {
         this.itemDesc = itemDesc;
     }

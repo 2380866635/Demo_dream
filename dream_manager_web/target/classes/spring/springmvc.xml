@@ -45,7 +45,7 @@
     <dubbo:reference interface="com.dream.content.service.TbContentService"
                      id="tbContentService"/>
     <dubbo:reference interface="com.dream.search.service.SearchItemService"
-                     id="searchItemService" timeout="18000"/>
+                     id="searchItemService" timeout="30000"/>
 
     <context:property-placeholder location="classpath:resource/resources.properties"/>
 

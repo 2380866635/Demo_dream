@@ -10,10 +10,11 @@
         <module name="dream_manager_web" />
         <module name="dream_manager_service" />
         <module name="dream_content_service" />
-        <module name="dream_content_interface" />
-        <module name="dream_manager_dao" />
-        <module name="dream_manager_interface" />
+        <module name="dream_search_web" />
         <module name="dream_search_interface" />
+        <module name="dream_content_interface" />
+        <module name="dream_manager_interface" />
+        <module name="dream_manager_dao" />
         <module name="dream_common" />
         <module name="dream_search_service" />
         <module name="dream_manager_pojo" />
@@ -35,6 +36,7 @@
       <module name="dream_search" target="1.8" />
       <module name="dream_search_interface" target="1.8" />
       <module name="dream_search_service" target="1.8" />
+      <module name="dream_search_web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -54,7 +54,8 @@
 	</div>
 	<div class="p-price">
 		<i>dream价：</i>
-		<strong>￥<fmt:formatNumber groupingUsed="false" maxFractionDigits="2" minFractionDigits="2" value="${item.price / 100 }"/></strong>
+		<strong>￥<fmt:formatNumber groupingUsed="false" maxFractionDigits="2" minFractionDigits="2"
+                                   value="${item.price/100}"/></strong>
 	</div>
 	<div class="service">由 dream 发货</div>
 	<div class="extra">

@@ -18,4 +18,15 @@ public class SearchItemController {
             return DreamResult.build(500,"导入索引失败！",null);
         }
     }
+
+    @RequestMapping("/index/deletsAll")
+    public DreamResult deleteAllItems(){
+        try {
+            return searchItemService.deleteAllItems();
+        } catch (Exception e) {
+            return DreamResult.build(500,"刪除索引失败！",null);
+        }
+    }
+
+
 }

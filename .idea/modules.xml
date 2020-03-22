@@ -17,6 +17,7 @@
       <module fileurl="file://$PROJECT_DIR$/dream_search/dream_search.iml" filepath="$PROJECT_DIR$/dream_search/dream_search.iml" />
       <module fileurl="file://$PROJECT_DIR$/dream_search/dream_search_interface/dream_search_interface.iml" filepath="$PROJECT_DIR$/dream_search/dream_search_interface/dream_search_interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/dream_search/dream_search_service/dream_search_service.iml" filepath="$PROJECT_DIR$/dream_search/dream_search_service/dream_search_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dream_search_web/dream_search_web.iml" filepath="$PROJECT_DIR$/dream_search_web/dream_search_web.iml" />
     </modules>
   </component>
 </project>

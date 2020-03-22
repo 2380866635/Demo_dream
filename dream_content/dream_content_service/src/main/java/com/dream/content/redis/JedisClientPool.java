@@ -9,9 +9,9 @@ import redis.clients.jedis.JedisPool;
 /**
  * 单机版 redis
  */
-//@Component
+@Component
 public class JedisClientPool implements JedisClient {
-  // @Autowired
+  @Autowired
    private JedisPool jedisPool;
     @Override
     public String set(String key, String value) {
