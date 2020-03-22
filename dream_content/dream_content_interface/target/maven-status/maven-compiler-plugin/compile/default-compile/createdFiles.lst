@@ -1,0 +1,4 @@
+com\dream\content\service\IndexTbContentService.class
+com\dream\content\redis\JedisClient.class
+com\dream\content\service\TbContentCategoryService.class
+com\dream\content\service\TbContentService.class
