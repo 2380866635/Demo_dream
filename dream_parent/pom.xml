@@ -15,6 +15,7 @@
         <module>../dream_content</module>
         <module>../dream_search</module>
         <module>../dream_search_web</module>
+        <module>../dream_item_web</module>
     </modules>
     <packaging>pom</packaging>
 

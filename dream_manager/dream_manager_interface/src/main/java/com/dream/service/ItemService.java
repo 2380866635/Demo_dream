@@ -3,6 +3,7 @@ package com.dream.service;
 import com.dream.common.pojo.DreamResult;
 import com.dream.common.pojo.EasyUiDataGridResult;
 import com.dream.pojo.TbItem;
+import com.dream.pojo.TbItemDesc;
 
 import java.util.List;
 
@@ -13,6 +14,13 @@ public interface ItemService {
      * @return
      */
     DreamResult delete(List<Long> itemIds);
+
+    /**
+     * 根据itemId查询商品详细
+     * @param itemId
+     * @return
+     */
+    TbItemDesc getItemDescById(long itemId);
 
     /**
      * 根据商品Id进行查询
@@ -36,6 +44,11 @@ public interface ItemService {
      */
     DreamResult save(TbItem tbItem, String desc);
 
-
+    /**
+     * 修改商品信息功能
+     * @param tbItem
+     * @param desc
+     * @return
+     */
     DreamResult update(TbItem tbItem, String desc);
 }
