@@ -37,7 +37,7 @@
         在controller中注入对象时，使用这个id进行注入
     -->
     <dubbo:reference interface="com.dream.service.ItemService"
-                     id="itemService"/>
+                     id="itemService" timeout="30000"/>
     <dubbo:reference interface="com.dream.service.ItemCatService"
                      id="itemCatService"/>
     <dubbo:reference interface="com.dream.content.service.TbContentCategoryService"

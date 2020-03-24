@@ -59,16 +59,17 @@ public class ItemServiceImpl implements ItemService {
         return DreamResult.ok();
     }
 
+
     @Override
     public TbItemDesc getItemDescById(long itemId) {
         //添加缓存是不能影响到现在的业务逻辑的
         try {
             //1、查询缓存
-            String jedis = jedisClient.get(ITEM_INFO_KEY + ":" + itemId + ":BASE");
+            String jedis = jedisClient.get(ITEM_INFO_KEY + ":" + itemId + ":DESC");
             //得到数据不为空说明有缓存 直接返回
             if (StringUtils.isNoneBlank(jedis)) {
                 //设置下过期时间 8小时 第一次访问到中间八小时存在 时间到后过期
-                jedisClient.expire(ITEM_INFO_KEY + ":" + itemId + ":BASE"
+                jedisClient.expire(ITEM_INFO_KEY + ":" + itemId + ":DESC"
                         , ITEM_INFO_KEY_EXPIRED);
 
                 return JSON.parse(jedis,TbItemDesc.class);
@@ -81,8 +82,8 @@ public class ItemServiceImpl implements ItemService {
         //查询完之后  加入缓存中
         if(tbItemDesc!=null){
             try {
-                jedisClient.set(ITEM_INFO_KEY+":"+itemId+":BASE",JSON.json(tbItemDesc));
-                jedisClient.expire(ITEM_INFO_KEY+":"+itemId+":BASE",ITEM_INFO_KEY_EXPIRED);
+                jedisClient.set(ITEM_INFO_KEY+":"+itemId+":DESC",JSON.json(tbItemDesc));
+                jedisClient.expire(ITEM_INFO_KEY+":"+itemId+":DESC",ITEM_INFO_KEY_EXPIRED);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -95,13 +96,12 @@ public class ItemServiceImpl implements ItemService {
         //添加缓存是不能影响到现在的业务逻辑的
         try {
             //1、查询缓存
-            String jedis = jedisClient.get(ITEM_INFO_KEY + ":" + itemId + ":BASE");
+            String jedis = jedisClient.get(ITEM_INFO_KEY+":"+itemId+":BASE");
             //得到数据不为空说明有缓存 直接返回
             if (StringUtils.isNoneBlank(jedis)) {
                 //设置下过期时间 8小时 第一次访问到中间八小时存在 时间到后过期
                 jedisClient.expire(ITEM_INFO_KEY + ":" + itemId + ":BASE"
                         , ITEM_INFO_KEY_EXPIRED);
-
                 return JSON.parse(jedis,TbItem.class);
             }
         } catch (Exception e) {
@@ -109,6 +109,7 @@ public class ItemServiceImpl implements ItemService {
         }
         //逆向工程提供的根据主键查找信息的方法
         TbItem tbItem = tbItemMapper.selectByPrimaryKey(itemId);
+
         //查询完之后  加入缓存中
         if(tbItem!=null){
             try {
@@ -118,7 +119,6 @@ public class ItemServiceImpl implements ItemService {
                 e.printStackTrace();
             }
         }
-
         return  tbItem;
     }
 

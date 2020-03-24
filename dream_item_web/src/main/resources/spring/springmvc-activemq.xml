@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!--创建连接-->
+    <bean class="org.apache.activemq.ActiveMQConnectionFactory"
+          id="activeMQConnectionFactory">
+        <property name="brokerURL" value="tcp://192.168.1.12:61616"/>
+    </bean>
+    <!--Spring 管理mp 起始是jms 下的连接工程-->
+    <bean class="org.springframework.jms.connection.SingleConnectionFactory"
+          id="connectionFactory">
+        <property name="targetConnectionFactory" ref="activeMQConnectionFactory"/>
+    </bean>
+    <!--定义一个Jms的template-->
+    <bean class="org.springframework.jms.core.JmsTemplate" id="jmsTemplate">
+        <property name="connectionFactory" ref="connectionFactory"/>
+    </bean>
+    <!--配置点对点的模式-->
+   <!-- <bean id="queue" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg>
+            <value>spring-queue</value>
+        </constructor-arg>
+    </bean>-->
+    <!--配置发布/订阅模式 一对多的模式-->
+    <bean class="org.apache.activemq.command.ActiveMQTopic" id="destination">
+        <constructor-arg>
+            <value>item-update-topic</value>
+        </constructor-arg>
+    </bean>
+    <!--监听器配置-->
+    <bean class="com.dream.item.listener.ItemChangeGenHtmlMessageListener" id="itemUppdateListener"/>
+        <!--监听器的mq的连接配置-->
+    <bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+        <property name="connectionFactory" ref="connectionFactory"/>
+        <property name="destination" ref="destination"/>
+        <property name="messageListener" ref="itemUppdateListener"/>
+    </bean>
+
+</beans>

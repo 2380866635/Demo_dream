@@ -24,7 +24,7 @@
      ref="itemServiceImpl"把实现类的bean注入进来
   -->
   <dubbo:service interface="com.dream.service.ItemService"
-                 ref="itemServiceImpl"/>
+                 ref="itemServiceImpl" timeout="30000"/>
   <dubbo:service interface="com.dream.service.ItemCatService"
                  ref="itemCatServiceImpl"/>
 </beans>

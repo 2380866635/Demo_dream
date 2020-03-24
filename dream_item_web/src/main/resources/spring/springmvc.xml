@@ -12,7 +12,7 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <context:component-scan base-package="com.dream.item.controller"/>
+    <context:component-scan base-package="com.dream.item"/>
 
     <!--开启MVC注解扫描 如果配置了此注解驱动，那么就不用配置处理器映射器和处理器适配器了 -->
     <mvc:annotation-driven/>
@@ -21,12 +21,20 @@
     <!--
     <mvc:resources mapping="/css/**/" location="/css/"/>
     -->
+
+    <!--将freemarker交给spring容器管理 -->
+    <!--freemarker  指定要生成的文件模板信息-->
+    <!--配置生成Freemarker的模板路径-->
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer"
+          id="freeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/WEB-INF/ftl"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
     <!--定义视图解析器ViewResolver -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
-
     <!--加上一个ItemService的bean,从manager系统中调用-->
     <dubbo:application name="dream_item_web"/>
     <!--注册中心的地址-->

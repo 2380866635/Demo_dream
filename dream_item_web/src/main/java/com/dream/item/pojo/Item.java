@@ -1,4 +1,4 @@
-package com.dream.common.pojo;
+package com.dream.item.pojo;
 
 import com.dream.pojo.TbItem;
 
