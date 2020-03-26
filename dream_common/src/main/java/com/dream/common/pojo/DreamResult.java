@@ -9,10 +9,16 @@ public class DreamResult  implements Serializable {
     private String msg;
     //封装响应需要的所带的数据
     private Object data;
-
-    public DreamResult() {
+    //这是为登录界面写的方法
+    public static DreamResult build(Integer status,String name){
+        return new DreamResult(status,name);
     }
-
+    //一旦返回有数据了  则代表登录界面请求成功
+    public DreamResult(Integer status, String name) {
+        this.data=null;
+        this.status=status;
+        this.msg=name;
+    }
     public DreamResult(Object data) {
         this.data=data;
         this.msg="ok";

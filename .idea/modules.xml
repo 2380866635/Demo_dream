@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/dream_cart_web/dream_cart_web.iml" filepath="$PROJECT_DIR$/dream_cart_web/dream_cart_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/dream_common/dream_common.iml" filepath="$PROJECT_DIR$/dream_common/dream_common.iml" />
       <module fileurl="file://$PROJECT_DIR$/dream_content/dream_content.iml" filepath="$PROJECT_DIR$/dream_content/dream_content.iml" />
       <module fileurl="file://$PROJECT_DIR$/dream_content/dream_content_interface/dream_content_interface.iml" filepath="$PROJECT_DIR$/dream_content/dream_content_interface/dream_content_interface.iml" />
@@ -13,12 +14,20 @@
       <module fileurl="file://$PROJECT_DIR$/dream_manager/dream_manager_pojo/dream_manager_pojo.iml" filepath="$PROJECT_DIR$/dream_manager/dream_manager_pojo/dream_manager_pojo.iml" />
       <module fileurl="file://$PROJECT_DIR$/dream_manager/dream_manager_service/dream_manager_service.iml" filepath="$PROJECT_DIR$/dream_manager/dream_manager_service/dream_manager_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/dream_manager_web/dream_manager_web.iml" filepath="$PROJECT_DIR$/dream_manager_web/dream_manager_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dream_order/dream_order.iml" filepath="$PROJECT_DIR$/dream_order/dream_order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dream_order/dream_order_interface/dream_order_interface.iml" filepath="$PROJECT_DIR$/dream_order/dream_order_interface/dream_order_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dream_order/dream_order_service/dream_order_service.iml" filepath="$PROJECT_DIR$/dream_order/dream_order_service/dream_order_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dream_order_web/dream_order_web.iml" filepath="$PROJECT_DIR$/dream_order_web/dream_order_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/dream_parent/dream_parent.iml" filepath="$PROJECT_DIR$/dream_parent/dream_parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/dream_protal_web/dream_protal_web.iml" filepath="$PROJECT_DIR$/dream_protal_web/dream_protal_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/dream_search/dream_search.iml" filepath="$PROJECT_DIR$/dream_search/dream_search.iml" />
       <module fileurl="file://$PROJECT_DIR$/dream_search/dream_search_interface/dream_search_interface.iml" filepath="$PROJECT_DIR$/dream_search/dream_search_interface/dream_search_interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/dream_search/dream_search_service/dream_search_service.iml" filepath="$PROJECT_DIR$/dream_search/dream_search_service/dream_search_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/dream_search_web/dream_search_web.iml" filepath="$PROJECT_DIR$/dream_search_web/dream_search_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dream_sso/dream_sso.iml" filepath="$PROJECT_DIR$/dream_sso/dream_sso.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dream_sso/dream_sso_interface/dream_sso_interface.iml" filepath="$PROJECT_DIR$/dream_sso/dream_sso_interface/dream_sso_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dream_sso/dream_sso_service/dream_sso_service.iml" filepath="$PROJECT_DIR$/dream_sso/dream_sso_service/dream_sso_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dream_sso_web/dream_sso_web.iml" filepath="$PROJECT_DIR$/dream_sso_web/dream_sso_web.iml" />
     </modules>
   </component>
 </project>

@@ -1,4 +1,5 @@
 com\dream\common\pojo\SearchResult.class
+com\dream\common\pojo\CookieUtils.class
 com\dream\common\pojo\DreamResult.class
 com\dream\common\pojo\SearchItem.class
 com\dream\common\pojo\EasyUiTreeNode.class

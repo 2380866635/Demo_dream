@@ -16,6 +16,11 @@
         <module>../dream_search</module>
         <module>../dream_search_web</module>
         <module>../dream_item_web</module>
+        <module>../dream_sso</module>
+        <module>../dream_sso_web</module>
+        <module>../dream_cart_web</module>
+        <module>../dream_order</module>
+        <module>../dream_order_web</module>
     </modules>
     <packaging>pom</packaging>
 

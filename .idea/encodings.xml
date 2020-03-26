@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/dream_cart_web/src/main/java/com/dream/cart/controller/CartController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_cart_web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_common/src/main/java/com/dream/common/pojo/DreamResult.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_common/src/main/java/com/dream/common/pojo/EasyUiTreeNode.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_common/src/main/java/com/dream/common/pojo/SearchItem.java" charset="UTF-8" />
@@ -37,6 +39,8 @@
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/java/com/dream/web/util/FastDFSClient.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_manager_web/src/main/resources/resource/fastdfs.conf" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_order/dream_order_interface/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dream_order/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_parent/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_protal_web/src/main/java/com/dream/protal/controller/IndexNodeController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dream_protal_web/src/main/resources" charset="UTF-8" />

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="dream_cart_web:war">
+    <output-path>$PROJECT_DIR$/dream_cart_web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>dream_cart_web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="dream_cart_web.war">
+      <element id="artifact" artifact-name="dream_cart_web:war exploded" />
+    </root>
+  </artifact>
+</component>
